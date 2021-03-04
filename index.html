@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vintønden er en online vinforhandler, hvor du kan købe kvalitetsvin til fornuftige priser.">
+    <title>Vintønden | Webdokumentar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+
+        <div class="container">
+            <!-- BAGGRUNDSILLUSTRATIONER -->
+            <img src="images/baggrund_mobil.jpg" alt="Baggrundsillustration af reol med vinflasker, globus, telefon og billedramme" class="background_mobile">
+            <img src="images/logo.png" alt="Vintøndens logo" class="logo">
+            <img src="images/reol.png" alt="Baggrundsillustration af reol med vinflasker, globus, telefon og billedramme" class="background_mobile reol_img">
+
+            <img src="images/Vintønden_bg.png" alt="Baggrundsillustration af vinkælder med vintønder og vinflasker" class="background_desktop">
+
+            <!-- BILLEDELEMENTER DESKTOP-->
+            <img src="images/Vintønde.png" alt="Illustration af vintønde" class="vintoende_img" id="vintoende_trigger">
+            <div class="vintoende_overlay overlay">
+                <div class="popup">
+                 <div onclick="stopVideoVin()" class="close" id="close">X</div>
+                 <h1 class="popup_heading">Vintønden teaser</h1>
+                 <video controls src="videos/vin-video.6mb.mp4" class="vin_video" id="vin_video"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+                </div>
+             </div> 
+
+            <img src="images/globus.png" alt="Illustration af globus" class="globus_img" id="globus_trigger">
+            <div class="globus_overlay overlay">
+               <div class="popup_globus">
+                <div class="close">X</div>
+                <h1 class="popup_heading_globus">Bestsellers fra Europa</h1>
+                <div class="kort_container">
+                    <img src="images/kort.png" alt="Workplace" usemap="#workmap" class="kort_img">
+                    <map name="workmap">
+                        <area shape="rect" coords="190,185,260,260" alt="Tyskland" href="#tyskland">
+                        <area shape="rect" coords="90,220,180,300" alt="Frankrig" href="#frankrig">
+                        <area shape="rect" coords="190,275,250,390" alt="Italien" href="#italien">
+                        <area shape="rect" coords="20,270,50,350" alt="Portugal" href="#portugal">
+                      </map>
+                </div>
+                <div class="globus_tekst_container">
+                    <div class="globus_flexbox">
+
+                <!-- FRANKRIG -->
+                    <div class="ramme">
+                        <div class="lande_tekst_container">
+                            <h2 class="lande_overskrifter" id="frankrig">2018 Les Terrasses d’Ardeche Rouge fra Frankrig</h2>
+                            <p class="globus_tekst">
+                            Velsmagende og venlig vin med en del solsødme. Fremstillet af Merlot og Syrah. Duft med sydfransk krydring og sødme. Helt åben smag med modne bær. God smagsfylde. Mild og behagelig. Ret sød især i eftersmagen, hvor der også er lidt bitterstof til at balancere.
+                            </p>
+                        </div>
+                        <img src="images/frankrig_rodvin.png" alt="Rødvin '2018 Les Terrasses d’Ardeche Rouge' fra Frankrig" class="lande_vinflasker_img">
+                    </div>
+
+                    <div class="ramme">
+                        <div class="lande_tekst_container">
+                            <h2 class="lande_overskrifter">2018 Les Terrasses d’Ardéche Blanc fra Frankrig</h2>
+                            <p class="globus_tekst">
+                                Frisk og læskende hvidvin fra Ardéche. Duften er præget er blomster, citrus og lemon. I smagen er vinen frisk, ren og frugtig. Et rigtig godt glas vin til prisen.
+                            </p>
+                        </div>
+                        <img src="images/frankrig_hvidvin.png" alt="Rødvin '2018 Les Terrasses d’Ardeche Rouge' fra Frankrig" class="lande_vinflasker_img">
+                    </div>
+
+                <!-- ITALIEN -->
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter" id="italien">2015 Valpolicella Classico Ripasso DOC – Monte Solane fra Italien</h2>
+                        <p class="globus_tekst">
+                            Unik og smagfuld Ripasso fra gamle vinstokke med lækre noter af frugt, peber og nelliker.
+                        </p>
+                    </div>
+                    <img src="images/italien_rodvin.png" alt="Rødvin '2015 Valpolicella Classico Ripasso DOC – Monte Solane' fra Italien" class="lande_vinflasker_img">
+                </div>
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter">2018 Langhe DOC – Arneis fra Italien</h2>
+                        <p class="globus_tekst">
+                            I næsen fornemmes en dejlig bouquet af frisk frugt og blomster. Perfekt til fisk, grøntsager og aperitif.
+                        </p>
+                    </div>
+                    <img src="images/italien_rose.png" alt="Rosévin '2018 Langhe DOC – Arneis' fra Italien" class="lande_vinflasker_img">
+                </div>
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter">2018 Moscato d´Asti – Piasa Sanmaurizio fra Italien</h2>
+                        <p class="globus_tekst">
+                            Verdensklasse Moscato d’Asti fra Forteto della Luja. Vinen vandt i Jyllands-Posten d. 04.12.2020 en blindtest som bedste mousserende vin til kransekage.
+                        </p>
+                    </div>
+                    <img src="images/italien_dessert.png" alt="Dessertvin '2018 Moscato d´Asti – Piasa Sanmaurizio' fra Italien" class="lande_vinflasker_img">
+                </div>
+                        
+
+                <!-- TYSKLAND -->
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter" id="tyskland">2016 “Incognito” Rotweinscuvèe Trocken fra Tyskland</h2>
+                        <p class="globus_tekst">
+                            Helt enestående rødvin fra den tyske riesling-konge Phillip Kuhn. Det er en eminent gastronomisk vin som med sine behagelige frugtnoter og kompleksitet vil bidrage positivt til enhver form for okse- og kalvekød.
+                        </p>
+                    </div>
+                    <img src="images/tyskland_rodvin.png" alt="Rødvin '2016 “Incognito” Rotweinscuvèe Trocken' fra Tyskland" class="lande_vinflasker_img">
+                </div>
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter">2017 Riesling SE Trocken fra Tyskland</h2>
+                        <p class="globus_tekst">
+                            Tysk Riesling med dejlig noter af grønne frugter, citrus og ferskenblomst. Perfekt til aperitif, fisk og skaldyr.
+                        </p>
+                    </div>
+                    <img src="images/tyskland_hvidvin.png" alt="Hvidvin '2017 Riesling SE Trocken' fra Tyskland" class="lande_vinflasker_img">
+                </div>
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter">2018 Späetburgunder Rosè SE trocken fra Tyskland</h2>
+                        <p class="globus_tekst">
+                            Lækker tysk rosévin. Perfekt til en grillaften på terassen.
+                        </p>
+                    </div>
+                    <img src="images/tyskland_rose.png" alt="Rosévin '2018 Späetburgunder Rosè SE trocken' fra Tyskland" class="lande_vinflasker_img">
+                </div>
+
+
+                <!-- PORTUGAL -->
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter" id="portugal">2018 Plateia Tinto Alentejano fra Portugal</h2>
+                        <p class="globus_tekst">
+                            Lækker og elegant portugiser.Vinen er totalt i balance og føles både rund og frisk i smagen. Det er helt sikkert en vin som vil overraske dig positivt.
+                        </p>
+                    </div>
+                    <img src="images/portugal_rodvin.png" alt="Rødvin '2018 Plateia Tinto Alentejano' fra Portugal" class="lande_vinflasker_img">
+                </div>
+
+                <div class="ramme">
+                    <div class="lande_tekst_container">
+                        <h2 class="lande_overskrifter">2018 Lavradores de Feitoria fra Portugal</h2>
+                        <p class="globus_tekst">
+                            Eminent anmelderrost hvidvin fra Duoro-dalen i Portugal. Vinen er frugtig, sprød og mineralsk i eftersmagen. Det er et helt igennem velbalanceret glas hvidvin, som vil please alle.
+                        </p>
+                    </div>
+                    <img src="images/portugal_hvidvin.png" alt="Hvidvin '2018 Lavradores de Feitoria' fra Portugal" class="lande_vinflasker_img">
+                </div>
+             </div>
+
+                </div>
+               </div>
+            </div>  
+
+            <img  onmouseover="playAudioVin()" onmouseout="stopAudioVin()" src="images/vinflaske.png" alt="Illustration af vanflaske" class="vinflaske_img">
+            <audio id="vin_lyd">
+                <source src="sounds/vin.mp3" type="audio/mp3">
+            </audio>
+
+            <img onmouseover="playAudio()" onmouseout="stopAudio()" src="images/Anders.png" alt="Illustration af kundeservice medarbejder Anders" class="kundeservice_img" id="kundeservice_trigger">
+            <audio id="kundeservice_lyd">
+                <source src="sounds/kundeservice.mp3" type="audio/mp3">
+            </audio>
+           
+
+            <img src="images/Mathias.png" alt="Illustration af indehaver Mathias" class="mathias_img" id="mathias_trigger">
+            <div class="mathias_overlay overlay">
+                <div class="popup">
+                 <div onclick="stopVideoInt()" class="close" id="interview_close">X</div>
+                 <h1 class="popup_heading">Vintønden - hvem er vi?</h1>
+                 <video controls src="videos/interview_mathias_test.mp4" class="interview_video" id="interview_video"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+                </div>
+             </div> 
+            
+            <img src="images\kasse.png" alt="Illustration af vinkasse" class="kasse_img" id="kasse_trigger"> 
+            <div class="kasse_overlay overlay">
+               <div class="popup">
+                <div onclick="stopVideoKas()" class="close" id="kasse_close">X</div>
+                <h1 class="popup_heading">Vinkassen</h1>
+                 <video controls src="videos/samlet.mp4" class="kasse_video" id="kasse_video"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+               </div>
+            </div> 
+
+           
+
+
+            <!-- BILLEDELEMENTER MOBILE-->
+
+            <div class="mobile_container">
+                
+            <img src="images/Vintønde.png" alt="Illustration af vintønde" class="mobile_vintoende_img" id="mobile_vintoende_trigger">
+            <div class="vintoende_overlay overlay_mobile">
+                <div class="popup_mobile">
+                 <div onclick="stopVideoVinM()" class="close" id="vin_close_m">X</div>
+                 <h1 class="popup_heading">Vintønden teaser</h1>
+                 <video controls src="videos/vin-video.6mb.mp4" class="vin_video" id="vin_video_mobile"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+                </div>
+             </div> 
+
+            <!-- <img src="images/globus.png" alt="Illustration af globus" class="mobile_globus_img" id="mobile_globus_trigger">
+            <div class="globus_overlay overlay_mobile">
+               <div class="popup_globus">
+                <div class="close">X</div>
+                <h1>This is a popup</h1>
+                <p>Hej, det her er globus popup</p>
+               </div>
+            </div>   -->
+
+            <img  onclick="playAudioVin()" onclick="stopAudioVin()" src="images/vinflaske.png" alt="Illustration af vanflaske" class="mobile_vinflaske_img">
+            <audio id="vin_lyd">
+                <source src="sounds/vin.mp3" type="audio/mp3">
+            </audio>
+
+            <img onclick="playAudio()" onclick="stopAudio()" src="images/telefon.png" alt="Illustration af kundeservice medarbejder Anders" class="mobile_kundeservice_img" id="kundeservice_trigger">
+            <audio id="kundeservice_lyd">
+                <source src="sounds/kundeservice.mp3" type="audio/mp3">
+            </audio>
+           
+
+            <img src="images/billedramme.png" alt="Illustration af indehaver Mathias i en billedramme" class="mobile_mathias_img" id="mobile_mathias_trigger">
+            <div class="mathias_overlay overlay_mobile">
+                <div class="popup_mobile">
+                 <div onclick="stopVideoIntM()" class="close" id="interview_close_m">X</div>
+                 <h1 class="popup_heading">Vintønden - hvem er vi?</h1>
+                 <video controls src="videos/interview_mathias_test.mp4" class="interview_video" id="interview_video_mobile"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+                </div>
+             </div> 
+            
+            <img src="images/kasse_mobile.png" alt="Illustration af vinkasse" class="mobile_kasse_img" id="mobile_kasse_trigger"> 
+            <div class="kasse_overlay overlay_mobile">
+               <div class="popup_mobile">
+                <div onclick="stopVideoKasM()" class="close" id="kasse_close_m">X</div>
+                <h1 class="popup_heading">Vinkassen</h1>
+                 <video controls src="videos/samlet.mp4" class="kasse_video" id="kasse_video_mobile"></video>
+                 <img src="images/underskrifter.png" alt="Mathias Dalum og Anders s underskrifter" class="underskrifter_img">
+               </div>
+            </div> 
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

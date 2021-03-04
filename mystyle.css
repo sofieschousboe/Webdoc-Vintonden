@@ -1,0 +1,529 @@
+/* Basic CSS reset */
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* You start your css below */
+
+
+/* ------- PAGE LAYOUT ------- */
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+
+}
+
+/* ------- WRAPPER ------- */
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 426px;
+}
+
+/* ------- CONTAINER & BACKGROUND ------- */
+
+.container {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;  /* Var oprindeligt sat til relative, men ændrede det til absolute for at få sat baggrundsbilledet fast til bunden af skærmen */
+    z-index: 10000;
+    bottom: 0%; /* Sætter baggrundsbilledet fast i bunden af skærmen, så loftet bliver skåret af, men der kommer ingen scrollbar, så ma skal scroll ned ad siden for at se hele billedet */
+    overflow: hidden; /* Gør sådan at der ikke kommer en scrollbar når man hover over Anders */
+}
+
+.background_desktop {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    top: 1%;
+    left: 26%;
+    z-index: 99;
+    filter: invert();
+    opacity: 0.8;
+    width: 48%;
+    transform: rotate(-1deg);
+}
+
+.reol_img {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+}
+
+.background_mobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ------- BILLEDELEMENTER DESKTOP ------- */
+
+.vintoende_img {
+    display: none;
+}
+
+.globus_img {
+    display: none;
+}
+
+.vinflaske_img {
+    display: none;
+}
+
+.mathias_img {
+    display: none;
+}
+
+.kundeservice_img {
+    display: none;
+}
+
+.kasse_img {
+    display: none;
+}
+
+
+/* ------- BILLEDELEMENTER MOBILE ------- */
+
+    /* TØNDE */
+    .mobile_vintoende_img {
+        display: block;
+        width: 19%;
+        position: absolute;
+        top: 47.5%;
+        left: 13%;
+        z-index: 999;
+    }
+
+    /* GLOBUS */
+    .mobile_globus_img {
+        display: block;
+        max-width: 35%;
+        position: absolute;
+        bottom: 6%;
+        right: 4.6%;
+        z-index: 999;
+    }
+
+    /* VINFLASKE */
+    .mobile_vinflaske_img {
+        display: block;
+        max-width: 50%;
+        position: absolute;
+        top: 41.9%;
+        right: -3%;
+        filter: brightness(120%);
+        z-index: 999;
+    }
+
+    /* TELEFON */
+    .mobile_kundeservice_img {
+        display: block;
+        max-width: 27%;
+        position: absolute;
+        top: 30.5%;
+        right: 36%;
+        z-index: 999;
+    }
+
+    /* BILLEDRAMME */
+    .mobile_mathias_img {
+        display: block;
+        max-width: 30%;
+        position: absolute;
+        bottom: 5.5%;
+        left: 8%;
+        transform: rotate(4deg);
+        z-index: 999;
+    }
+
+    /* KASSE */
+    .mobile_kasse_img {
+        display: block;
+        max-width: 28%;
+        position: absolute;
+        bottom: 20%;
+        right: 35%;
+        z-index: 999;
+    }
+
+
+
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* ------- TABLET ------- */
+
+@media only screen and (min-width: 426px) {
+
+    /* ------- WRAPPER ------- */
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    /* ------- CONTAINER ------- */
+
+    .container {
+        margin: 0 auto;
+    }
+
+}
+
+/* ------- POP UPS LAYOUT ------- */
+
+.popup_heading {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* GLOBUS */
+.popup_heading_globus {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    padding-top: 1.25rem;
+}
+
+/* MATHIAS */
+.interview_video {
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+    box-shadow:4px 4px 18px 1px #000000;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.underskrifter_img {
+    max-width: 30%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+/* VINPORNO */
+.vin_video {
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+    box-shadow:4px 4px 18px 1px #000000;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+/* KASSEVIDEO */
+.kasse_video {
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+    box-shadow:4px 4px 18px 1px #000000;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+/* KORT OG GLOBUS INDHOLD */
+.kort_container {
+    max-width: 100%;
+}
+
+.kort_img {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    filter: brightness(110%);
+}
+
+.globus_tekst_container {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px 20px 0;
+}
+
+.globus_flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content:space-between;
+    max-width: 100%;
+}
+
+.ramme {
+    border-top: 2px solid #55454d;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content:space-between;
+}
+
+.lande_tekst_container {
+    max-width: 60%;
+}
+
+.lande_overskrifter {
+    font-size: 1.1rem;
+    color: black;
+}
+
+.globus_tekst {
+    color: black;
+}
+
+.lande_vinflasker_container {
+    display: block;
+    width: 20%;
+}
+
+.lande_vinflasker_img {
+    max-width: 20%;
+}
+
+
+/* ------- POPUPS LAYOUT ------- */
+
+.overlay {
+    position: fixed;
+    height: 100%; 
+    width: 100%;
+    top: 0;
+    right: 0;  
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 1;
+ }
+
+ .popup {
+    width: 50%;
+    height: 70%;
+    padding: 1.25rem;
+    position: relative;
+    margin: 15vh auto 0;
+    background-color: #55454d;
+    color: white;
+ }
+ 
+ .popup_globus {
+    width: 50%;
+    height: 70%;
+    padding: 0;
+    position: relative;
+    margin: 15vh auto 0;
+    background-color: #55454d;
+    color: white;
+    overflow-y: scroll;
+ }
+
+ /* POPUPS LAYOUT MOBILE */
+
+ .overlay_mobile {
+    position: fixed;
+    height: 100%; 
+    width: 100%;
+    top: 0;
+    right: 0;  
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 1000;
+ }
+ 
+ .popup_mobile {
+    width: 98%;
+    height: 70%;
+    padding: 1rem;
+    position: relative;
+    margin: 15vh auto 0;
+    background-color: #55454d;
+    color: white;
+ }
+
+ #interview_video_mobile {
+     display: block;
+     max-width: 100%;
+ }
+
+ #kasse_video_mobile {
+    display: block;
+    max-width: 100%;
+}
+
+#vin_video_mobile {
+    display: block;
+    max-width: 100%;
+}
+
+ /* SCROLLBAR */
+
+ ::-webkit-scrollbar {
+     width: 10px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: #f1f1f1;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: #999;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: #666;
+ }
+
+ .close {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    cursor: pointer;
+    color: #ffffff;
+    font-style: bold;
+ }
+
+
+/* ------- DESKTOP ------- */
+
+@media only screen and (min-width: 760px) {
+
+    /* ------- WRAPPER ------- */
+
+    .wrapper {
+        max-width: 100%;
+    }
+
+
+    /* ------- CONTAINER & BACKGROUND ------- */
+
+    .mobile_container {
+        display: none;
+    }
+
+    .container {
+        position: absolute;  /* Var oprindeligt sat til relative, men ændrede det til absolute for at få sat baggrundsbilledet fast til bunden af skærmen */
+        margin: 0 auto;
+    }
+
+    .background_mobile {
+        display: none;
+    }
+
+    .background_desktop {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    /* ------- BILLEDELEMENTER ------- */
+
+    /* TØNDE */
+    .vintoende_img {
+        display: block;
+        max-width: 8%;
+        position: absolute;
+        top: 59%;
+        left: 61%;
+    }
+
+    /* GLOBUS */
+    .globus_img {
+        display: block;
+        max-width: 13%;
+        position: absolute;
+        top: 64.5%;
+        left: 29%;
+    }
+
+    /* VINFLASKE */
+    .vinflaske_img {
+        display: block;
+        max-width: 7.6%;
+        position: absolute;
+        top: 54.4%;
+        left: 47.1%;
+        filter: brightness(120%)
+    }
+
+    /* ANDERS */
+    .kundeservice_img {
+        display: block;
+        max-width: 12%;
+        position: absolute;
+        top: 40.5%;
+        right: 0.8%;
+    }
+
+    /* MATHIAS */
+    .mathias_img {
+        display: block;
+        max-width: 10%;
+        position: absolute;
+        top: 51.4%;
+        left: 20%;
+        transform: rotate(1.5deg);
+    }
+
+    /* KASSE */
+    .kasse_img {
+        display: block;
+        max-width: 14%;
+        position: absolute;
+        bottom: 2.5%;
+        right: 35%;
+    }
+
+    /* ------- BILLEDELEMENTER HOVER EFFEKT ------- */
+
+    .vintoende_img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .globus_img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .vinflaske_img:hover {
+        transform: scale(1.3);
+    }
+
+    .kundeservice_img:hover {
+        transform: scale(1.1);
+    }
+
+    .mathias_img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .kasse_img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
